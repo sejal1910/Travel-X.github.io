@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TravelX-Registration</title>
+<link rel="stylesheet" type="text/css" href="style1.css"/>
+
+
+<script>
+function validateForm(){
+  var fn=document.forms["myForm"]["Fname"].value;
+  var ln=document.forms["myForm"]["Lname"].value;
+  var gn=document.forms["myForm"]["male"];
+  var mob=document.forms["myForm"]["MNum"].value;
+  var em=document.forms["myForm"]["email"].value;
+  var passwords=document.forms["myForm"]["pass"].value;  
+  var confirmp=document.forms["myForm"]["cpass"].value; 
+  var pattern=/^[0-9]{10}$/; 
+  var pattern_1=/^[a-zA-z0-9._-]+@[a-zA-Z0-9.-]+[a-zA-Z]{2,4}$/;
+  var pattern_2=/^[a-zA-z0-9]{6,15}$/;
+  
+  
+  if(fn==null||fn=="")
+  {
+    alert("First name must be filled");
+    return false;
+  }
+  else if(ln==null||ln=="")
+  {
+    alert("Last name must be filled");
+    return false;
+  }
+  else if((gn[0].checked==false)&&(gn[1].checked==false))
+  {
+     alert("Please select your gender");
+     return false;
+  }
+  else if(!pattern.test(mob))
+  {
+    alert("Enter valid mobile number");
+     return false;
+   }
+  else if(!pattern_1.test(em))
+  {
+     alert("Enter valid email address");
+     return false;
+  }
+  else if(passwords=="")
+  {
+     alert("Enter the password");
+     return false;
+  }    
+  else if(!pattern_2.test(passwords)) 
+  {  
+     alert("Please valid password having characters between 6-15");
+     return false;
+  }
+  else if(passwords!=confirmp)
+  {
+     alert("Passwords did not match.Please re-enter the password.");
+  }
+}
+</script>
+</head>
+
+<body id="myPage">
+
+ <div class="overlay">
+
+ <header class="d-flex-r clear justify-content-space-between">
+    <div class="my-1" id="logo"><img src="images/logoo.png"><h3><b>TravelX</h3></b></div>
+   <nav class="f1_right font-xs text-uppercase" id="main-navbar">
+  <ul class="clear">
+    <li class="active"><a href="index.html">Home</a></li>
+    <li><a href="#" class="drop">Services</a>
+       <ul>
+         <li><a href="#">Flights</a></li>
+         <li><a href="#">Hotels</a></li>
+         <li><a href="#">Insurance</a></li>
+       </ul>
+     </li>
+     <li><a href="#" class="drop">Packages</a>
+     <ul>
+          <li><a href="#">International tours</a></li>
+          <li><a href="#">Group packages</a></li>
+          <li><a href="#">Single packages</a></li>
+      </ul>
+      </li>
+           <li><a href="xyz.html">Gallery</a></li>
+           <li><a href="abc.html">Register</a></li>
+           <li><a href="#">Contact us</a></li>
+      </ul>
+     </nav>
+</header>
+</div>
+
+     <h1>Register here to book your tours</h1>
+    <div class="register">    
+    <form name="myForm" method="post" id="register" action="abc.html" onsubmit="return validateForm()">
+       <label>First Name:</label><br>
+         <input type="text" name="Fname" id="name" placeholder="Enter your First Name"><br><br>
+       <label>Last Name:</label><br>
+         <input type="text" name="Lname" id="name" placeholder="Enter your Last Name"><br><br>
+       <label>Gender:</label><br>
+         <input type="radio" name="male" id="male"><span id="male">&nbsp;Male</span>&nbsp;&nbsp;
+         <input type="radio" name="male" id="male"><span id="male">&nbsp;Female</span>&nbsp;&nbsp;<br><br>
+       <label>Mobile no.</label><br>
+         <input type="text" name="MNum" id="num" placeholder="Enter your Mobile no."><br><br>
+       <label>Email:</label><br>
+         <input type="email" name="email" id="name" placeholder="Enter your Email"><br><br>
+       <label>Password:</label><br>
+         <input type="password" name="pass" id="name" placeholder="Enter your Password"><br><br>
+       <label>Confirm password:</label><br>
+         <input type="password" name="cpass" id="name" placeholder="Re-enter your Password"><br><br>   
+       <input type="submit" value="Register" id="sub">
+    </form>
+  </div>
+
+</body>
+</html>

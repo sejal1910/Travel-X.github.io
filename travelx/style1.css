@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/
+  css?family=Merriweather+Sans|Poppins');
+
+*{
+   margin:0;
+   padding: 0;
+}
+
+body{
+   background-image: url(images/w.jpg);
+   background-size: 100% 750px;
+   background-repeat: no-repeat;
+}
+
+h1{
+   text-align:center;
+   padding: 20px;
+}
+
+h2{
+   text-align:center;
+   padding: 20px;
+}
+
+.register{
+    background:#57ADC4;
+    width: 500px;
+    margin: 0px 0px 0px 490px;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#register{
+    margin-left: 50px;
+}
+
+label{
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+#name{
+     width: 300px;
+     border: none;
+     border-radius: 3px;
+     outline: 0;
+     padding: 7px;
+}
+
+#num{
+     width: 300px;
+     padding: 7px;
+     border: none;
+     border-radius: 3px;
+     outline: 0;
+}
+
+#sub{
+     width: 200px;
+     padding: 7px;
+     font-size: 16px;
+     font-family: sans-serif;
+     font-weight: 600;
+     border: none;
+     border-radius: 3px;
+     outline: 0;
+}
+
+.d-flex-r{
+    display: flex !important;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.justify-content-space-between{
+    justify-content: space-between;
+}
+
+.my-1{margin-top: 1rem;margin-bottom: 1rem;}
+
+.clear{display: block;}
+.clear::before, .clear::after{display: table;content: "";}
+
+.f1_right{float: right;}
+
+
+.overlay{
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.3) !important;
+}
+
+#logo img{height: 50px;}
+nav ul,nav ol{margin: 0;padding: 0;list-style: none;}
+
+#main-navbar{line-height: normal;}
+#main-navbar li{
+      display: inline-block;
+      position: relative;
+      margin: 0 15px 0 0;
+      padding: 0;
+}
+
+#main-navbar li:last-child{margin-right: 0;}
+#main-navbar li a{display: block;padding: 25px 0;color: inherit;}
+#main-navbar li li{width:100%; margin: 0;}
+#main-navbar li li:hover > a{color: #FFF; background-color: #2E8B57;}
+#main-navbar .drop{padding-left: 15px;}
+#main-navbar ul ul{
+   z-index: 9999;
+   position: absolute;
+   width:180px;
+   text-transform: none;
+   visibility: hidden;
+   opacity: 0;
+}
+
+#main-navbar li li a,#main-navbar li li .drop{
+   display: block;
+   margin: 0;
+   padding: 10px 15px;
+}
+
+#main-navbar ul li:hover > ul{
+  visibility: visible;
+  opacity: 1;
+}
+
+#main-navbar li li .drop::after{top: 15px; left: 5px;}
+#main-navbar .drop::after, #main-navbar li li .drop::after{
+  content: "\f0d7";
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 10px;
+  line-height: 10px;
+}
+
+#main-navbar .active a,#main-navbar a:hover,#main-navbar li:hover > a{
+   color: #FFF;
+   font-size: 1.1rem;
+   font-weight: 600;
+   background-color: inherit;
+}
+
+#main-navbar .drop::after{
+   top: 30px;
+   left: 5px;
+}
+
+#main-navbar ul ul ul{
+   left: 180px;
+   top: 0;
+}
+
+
+.font-xs{font-size: 1rem;}
+
+.heading{
+   font-family: Poppins,sans-serif;
+   margin:0;
+   line-height: normal;
+}
+
+h1{letter-spacing: 5px;}
+
+*, *::before, *::after{box-sizing: border-box;}
+
+*, *::before, *::after, *:hover{transition: all 0.3s ease-in-out;}
+
+a{
+   outline:none;
+   text-decoration: none;
+   color: #333;
+   cursor: pointer;
+}
+
+a:hover{font-weight: bold;}
+
+html{overflow-x: hidden;overflow-y: scroll;}
+
+html,body{
+   color: #FFF;
+   font-size: 13px;
+   margin: 0;
+   padding: 0;
+   line-height: 1.6em;
+   font-family: 'Merriweather Sans',sans-serif;
+}
+
+.text-uppercase{text-transform: uppercase;}
